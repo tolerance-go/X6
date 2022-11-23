@@ -22,7 +22,7 @@
     "clean": "run-s clean:build clean:turbo clean:modules",
     "update:deps": "pnpm update --interactive --latest --recursive",
     "setup:husky": "husky install .husky",
-    "prepare": "is-ci || run-p setup:husky build:dev"
+    "prepare-": "is-ci || run-p setup:husky build:dev"
   },
   "rss": {
     "clean:turbo": "rimraf .turbo",
@@ -60,11 +60,6 @@
     "*.ts?(x)": [
       "eslint --fix",
       "prettier --parser=typescript --write"
-    ]
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
     ]
   },
   "pnpm": {
